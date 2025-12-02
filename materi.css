@@ -1,0 +1,167 @@
+/* ---------- GLOBAL STYLE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
+    color: #ffffff;
+    line-height: 1.9;
+    padding-bottom: 30px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    width: 100%;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 1000;
+}
+
+
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 8px #00d4ff;
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+    margin-top: 120px;
+    padding: 30px 50px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 40px 0 15px;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 25px;
+    color: #ffa600;
+}
+
+p, li {
+    font-size: 17px;
+}
+
+/* ---------- LIST STYLE ---------- */
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 7px;
+}
+
+/* ---------- ANIMASI REVEAL ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.9s ease-out forwards;
+}
+
+.data {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.data:hover {
+    color: #bfff00;
+    text-shadow: 0 0 8px #00d4ff;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay tiap elemen */
+.reveal:nth-child(1) { animation-delay: 0.2s; }
+.reveal:nth-child(2) { animation-delay: 0.35s; }
+.reveal:nth-child(3) { animation-delay: 0.5s; }
+
+/* ---------- CARD EFFECT (opsional kalau ingin buat section lebih rapi) ---------- */
+section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar ul {
+        gap: 15px;
+    }
+    .content {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+/* ---------- CONTENT (DITENGAH) ---------- */
+.content {
+    margin-top: 120px;
+    padding: 30px 50px;
+
+    /* bikin isi ke tengah */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* tetap rata kiri biar enak dibaca */
+}
+
+/* CARD/SECTION ditengah */
+section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    max-width: 900px;
+    margin: 0 auto;  /* ini yang bikin section di tengah */
+}
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Mahasiswa</title>
+    <link rel="stylesheet" href="from.css">
+</head>
+<body>
+    <h2>Form Pendaftaran Mahasiswa</h2>
+    <form action="process.php" method="POST">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" required><br><br>
+
+        <label>NPM:</label><br>
+        <input type="text" name="npm" required><br><br>
+
+        <label>Jurusan:</label><br>
+        <select name="jurusan" required>
+            <option value="">-- Pilih Jurusan --</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Informatika">Informatika</option>
+            <option value="Teknik Komputer">Teknik Komputer</option>
+            <option value="Manajemen Informatika">Manajemen Informatika</option>
+            <option value="Teknik Industri">Teknik Industri</option>
+            <option value="Teknik Elektro">Teknik Elektro</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>

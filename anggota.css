@@ -1,0 +1,118 @@
+/* ---------- GLOBAL STYLE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
+    color: #ffffff;
+    line-height: 1.7;
+    padding-bottom: 50px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    width: 100%;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar ul  a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 8px #00d4ff;
+}
+
+/* ====== CONTENT SECTION ====== */
+.content {
+    margin-top: 70px;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease forwards;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+}
+
+/* ====== GRID LIST ANGGOTA ====== */
+.anggota-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* ====== CARD ANIMATED ====== */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 18px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    font-size: 18px;
+    color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    transition: 0.35s ease;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+/* Hover glowing neon */
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: rgba(0,195,255,0.18);
+    box-shadow: 0 0 20px #00c3ff;
+}
+
+/* ====== REVEAL ANIMATION ====== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 0.9s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Soft Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

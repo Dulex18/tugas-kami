@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Input Data Mahasiswa</h2>
+
+    <form action="simpan.php" method="POST">
+        <label>Nama:</label>
+        <input type="text" name="nama" required>
+
+        <label>NIM:</label>
+        <input type="text" name="nim" required>
+
+        <label>Jurusan:</label>
+        <select name="jurusan" required>
+            <option value="">--Pilih Jurusan--</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Manajemen Informatika">Manajemen Informatika</option>
+            <option value="Ilmu Komputer">Ilmu Komputer</option>
+        </select>
+
+        <button type="submit">Simpan</button>
+    </form>
+</div>
+
+</body>
+</html>
